@@ -1,0 +1,41 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  block-size: border-box;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.container{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: white;
+  transition: 0.5s ease;
+  box-shadow:  2px 8px rgb(255,255,255,0.4);
+}
+.container img{
+  height: 200px;
+  width: 200px;
+  transition: 0.5s ease;
+}
+.container:hover{
+  overflow: visible;
+  border-radius: 20px;
+  width: 300px;
+  box-shadow:  2px 8px rgb(245,136,47,0.3);
+  transition: 0.5s ease;
+}
+.container:hover img{
+  transition: 0.5s ease;
+  transform: translate(0%,-50%);
+  width: 75px;
+  height: 75px;
+}
