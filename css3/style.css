@@ -428,20 +428,6 @@ nav .list{
   filter: drop-shadow(0 0 2px black);
 }
 
-/*Android Media Queries*/
-
-@media screen and (max-device-width: 480px) {
-  nav{
-    max-width: 100vw;
-  }
-  .list{
-    visibility: hidden;
-  }
-  .animation{
-    max-width: 100vw;
-  }
-}
-
 /*
 CSS HEX
 --eclipse: #322318;
