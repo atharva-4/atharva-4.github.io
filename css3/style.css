@@ -61,7 +61,7 @@ nav .list{
   margin-right: 5px;
 }
 
-
+/*Universal Div*/
 
 .animation-box{
   width: 100%;
@@ -69,6 +69,7 @@ nav .list{
   display: grid;
   justify-content: center;
   padding-top: 50px;
+  padding-bottom: 50px;;
   padding-bottom: 50px;
 }
 /*.animation-box button{
@@ -288,12 +289,144 @@ nav .list{
   height: 13px;
   border: 0;
   border-radius: 50%;
+  border: 0;
   background-color: #b80d0d;
   bottom: 11px;
   right: 45px;
   transition: 0.5s;
   animation: button-blink 3s linear infinite;
   animation-fill-mode: forwards;
+}
+
+/*Animated Speakers CSS*/
+
+.wall{
+  background-color: #322318;
+  width: 375px;
+  height: 225px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 25px;
+  box-shadow: 0px 6px 0px 0px #584131;
+  border-right: 3px solid #5e4435;
+}
+.wall::before{
+  content: '';
+  position: absolute;
+  top: -50px;
+  width: 210px;
+  height: 50px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #584131;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  z-index: -1;
+  border-right: 5px solid #322318;
+}
+.wall::after{
+  content: '';
+  position: absolute;
+  top: -32px;
+  width: 150px;
+  height: 32px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  z-index: -1;
+}
+.wall span{
+  position: absolute;
+  color: black;
+  width: 145px;
+  height: 50px;
+  border-radius: 5px;
+  background: green;
+  filter: drop-shadow(0 0 5px green);
+  left: 25%;
+  top: 23%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.radio-btn{
+  position: absolute;
+  width: 140px;
+  height: 105px;
+  border-radius: 5px;
+  border: 0;
+  left: 25%;
+  top: 60%;
+  background-color: #ad9a78;
+  transform: translate(-50%, -50%);
+  border-right: 3px solid #5e4435;
+  border-bottom: 2px solid #5e4435;
+}
+.radio-btn::before{
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 55px;
+  border-radius: 5px;
+  border: 0;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  background: #ffff29;
+  filter: drop-shadow(0 0 20px #ffff99);
+}
+.radio-btn::after{
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 8px;
+  border-radius: 5px;
+  border: 0;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  background: black;
+}
+.speaker{
+  position: absolute;
+  left: 72%;
+  transform: translate(-50%);
+  width: 150px;
+  height: 150px;
+  border: 0;
+  border-radius: 50%;
+  background-color: grey;
+  filter: drop-shadow(0 0 10px aqua);
+}
+.speaker::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 9%;
+  transform: translate(-50%);
+  width: 120px;
+  height: 120px;
+  border: 0;
+  border-radius: 50%;
+  background: yellow;
+}
+.speaker::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 32%;
+  transform: translate(-50%);
+  width: 50px;
+  height: 50px;
+  border: 0;
+  border-radius: 50%;
+  background: aqua;
+  filter: drop-shadow(0 0 2px black);
 }
 
 /*Android Media Queries*/
@@ -309,3 +442,29 @@ nav .list{
     max-width: 100vw;
   }
 }
+
+/*
+CSS HEX
+--eclipse: #322318;
+--bone: #ddd0b3;
+--millbrook: #584131;
+--sandrift: #ad9a78;
+--sand-dune: #817565;
+--roman-coffee: #78684f;
+--spring-wood: #f8f5f0;
+--zorba: #9e9186;
+--zambezi: #6b5c5c;
+
+
+SCSS HEX
+$eclipse: #322318;
+$bone: #ddd0b3;
+$millbrook: #584131;
+$sandrift: #ad9a78;
+$sand-dune: #817565;
+$roman-coffee: #78684f;
+$spring-wood: #f8f5f0;
+$zorba: #9e9186;
+$zambezi: #6b5c5c;
+
+*/
