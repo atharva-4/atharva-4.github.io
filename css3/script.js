@@ -1,3 +1,5 @@
+// Television JS //
+
 function play() { 
 var video = document.getElementById("vid"); 
 var button = document.getElementById("btn"); 
