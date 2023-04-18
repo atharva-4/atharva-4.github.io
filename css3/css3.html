@@ -24,7 +24,7 @@
   
   <!--main content-->
   <h3> 1] BOTTLE ANIMATION</h3>
-  <div class="animation">
+  <div class="animation-box">
     <div class="bottle">
       <div class="liquid">
 
@@ -33,20 +33,46 @@
   </div>
   
    <h3> 2] COMPUTER ANIMATION</h3>
-  <div class="animation">
+  <div class="animation-box">
     <div class="computer">
       <div class="screen">
       </div>
     </div>
+    <br />
   </div>
-  
+ 
   <h3> 3] TV WITH VIDEO</h3>
-  <div class="animation">
-    <div class="computer">
-      <div class="tv">
-        <video src="./video.mp4" autoplay  muted></video>
+  <div class="animation-box">
+    <div class="tv">
+      <div class="tv-screen" id="tv-scr">
+        <video id="vid" preload src="./video.mp4" poster="./blur.jpeg"></video>
       </div>
+      <button class="btn-play" id="btn"
+ onclick="play()"></button>
     </div>
   </div>
+<script type="text/javascript" charset="utf-8">
+  function play() { 
+var video = document.getElementById("vid"); 
+var button = document.getElementById("btn"); 
+var scr = document.getElementById("tv-scr");
+
+if (video.paused) { 
+video.play();
+video.style.width = 'auto';
+button.style.backgroundColor = 'green';
+button.style.animation = 'none';
+scr.style.boxShadow = '1px 2px 5px white';
+ } 
+else 
+{ 
+video.pause();
+video.style.width = '0px';
+button.style.backgroundColor = '#b80d0d';
+button.style.animation = '';
+scr.style.boxShadow = 'none';
+} 
+} 
+</script>
 </body>
 </html>
