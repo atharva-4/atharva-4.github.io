@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="./script.js"></script>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./static/res/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./static/css/style.css">
+  <script src="./static/script.js"></script>
   <title>Home</title>
 </head>
 <body>
@@ -46,7 +47,7 @@
   <div class="animation-box">
     <div class="tv">
       <div class="tv-screen" id="tv-scr">
-        <video id="vid" preload src="./video.mp4"></video>
+        <video id="vid" preload src="https://drive.google.com/uc?export=preview&id=1bdpNUJPgkDINJHqrcJvoLcUiTYytm7tJ"></video>
       </div>
       <button class="btn-play" id="btn"
  onclick="play()"></button>
@@ -55,12 +56,11 @@
   
   <h3> 4] ANIMATED SPEAKER</h3>
   <div class="animation-box">
-    <div class="wall">
-      <audio src="./audio.mp3"></audio>
-      <span>Content</span>
-      <button class="radio-btn" id="btn2" onclick="play()"></button>
-      
-      <div class="speaker">
+    <div class="wall" id="radi">
+      <audio src="./audio.mp3" id="aud"></audio>
+      <span id="name">Content</span>
+      <button class="radio-btn" id="btn2" onclick="playsong()"></button>
+      <div class="speaker" id="speake">
       </div>
     </div>
   </div>
