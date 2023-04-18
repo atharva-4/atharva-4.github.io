@@ -63,7 +63,7 @@ nav .list{
 
 
 
-.animation{
+.animation-box{
   width: 100%;
   height: auto;
   display: grid;
@@ -71,6 +71,10 @@ nav .list{
   padding-top: 50px;
   padding-bottom: 50px;
 }
+/*.animation-box button{
+  width: 50px;
+  height: 20px;
+}*/
 
 /*Bottle Animation*/
 
@@ -82,19 +86,20 @@ nav .list{
   background-color: #282828;
   position: relative;
   transform-origin: bottom center;
-  animation: bottle-shake 5s linear infinite;
+  transition: 0.5s;
+  animation: bottle-shake 5s linear 3s infinite;
 }
 @keyframes bottle-shake {
   0%{
     transform: rotate(0deg);
   }
-  25%{
+  20%{
     transform: rotate(15deg);
   }
-  50%{
+  60%{
     transform: rotate(0deg);
   }
-  75%{
+  80%{
     transform: rotate(-15deg);
   }
   100%{
@@ -102,16 +107,16 @@ nav .list{
   }
 }
 @keyframes liquid-shake {
-  0%{
+    0%{
     transform: rotate(0deg);
   }
-  25%{
+  20%{
     transform: rotate(-15deg);
   }
-  50%{
+  60%{
     transform: rotate(0deg);
   }
-  75%{
+  80%{
     transform: rotate(15deg);
   }
   100%{
@@ -141,7 +146,8 @@ nav .list{
   border-bottom-right-radius: 150px;
   filter: drop-shadow(0px 0px 15px aqua);
   transform-origin: top center;
-  animation: liquid-shake 5s linear infinite;
+  transition: 0.5s;
+  animation: liquid-shake 5s linear 3s infinite;
 }
 .liquid::before{
   content: '';
@@ -183,10 +189,10 @@ nav .list{
   animation-fill-mode: forwards;
 }
 @keyframes button-blink{
-  from{
+  0%, 100%{
     filter: drop-shadow(0px 0px 0px #b80d0d);
   }
-  to{
+  50%{
     filter: drop-shadow(0px 0px 10px #b80d0d);
   }
 }
@@ -199,6 +205,7 @@ nav .list{
   background-color: #282828;
   box-shadow: 0 0 20px #282828;
   padding: 10px;
+  transition: 0.5s;
   animation: screen-blink 2s linear 1;
   animation-fill-mode: forwards;
   animation-delay: 2s;
@@ -238,7 +245,24 @@ nav .list{
   box-shadow: 0 0 20px #ffff99;
   }
 }
+
+/*Working Tv HTML CSS and JS*/
+
 .tv{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 350px;
+  height: 250px;
+  border-radius: 30px;
+  background-color: #111;
+  position: relative;
+  box-shadow: 8.5px 8.5px #282828;
+}
+.tv-screen{
   position: relative;
   width: 305px;
   height: 200px;
@@ -247,13 +271,29 @@ nav .list{
   box-shadow: 0 0 20px #282828;
   padding: 10px;
   overflow: hidden;
+  transition: 0.5s;
 }
-.tv video{
+.tv-screen video{
   position: absolute;
   left: 0px;
   top: 0px;
-  width: auto;
+  width: 0;
   height: 100%;
+  transition: 0.5s;
+}
+.btn-play{
+  content: '';
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #b80d0d;
+  bottom: 11px;
+  right: 45px;
+  transition: 0.5s;
+  animation: button-blink 3s linear infinite;
+  animation-fill-mode: forwards;
 }
 
 /*Android Media Queries*/
