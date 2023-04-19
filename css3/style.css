@@ -299,7 +299,7 @@ nav .list{
 
 /*Animated Speakers CSS*/
 
-.wall{
+#wall{
   background-color: #322318;
   width: 375px;
   height: 225px;
@@ -311,7 +311,7 @@ nav .list{
   box-shadow: 0px 6px 0px 0px #584131;
   border-right: 3px solid #5e4435;
 }
-.wall::before{
+#wall::before{
   content: '';
   position: absolute;
   top: -50px;
@@ -325,7 +325,7 @@ nav .list{
   z-index: -1;
   border-right: 5px solid #322318;
 }
-.wall::after{
+#wall::after{
   content: '';
   position: absolute;
   top: -32px;
@@ -338,22 +338,27 @@ nav .list{
   border-top-right-radius: 5px;
   z-index: -1;
 }
-.wall span{
+#name{
   position: absolute;
   color: black;
+  content-visibility: var(--content2, hidden);
+  font-family: Monospace;
+  font-size: 1.3rem;
   width: 145px;
   height: 50px;
   border-radius: 5px;
   background: #494747;
-  filter: drop-shadow(0 0 8px #0c8d07);
+  filter: drop-shadow(0 0 0px #0c8d07);
   left: 25%;
   top: 23%;
   transform: translate(-50%, -50%);
   display: grid;
   justify-content: center;
   align-items: center;
+  content: '';
+  transition: 0.6s;
 }
-.radio-btn{
+#radio-btn{
   position: absolute;
   width: 140px;
   height: 105px;
@@ -365,9 +370,15 @@ nav .list{
   transform: translate(-50%, -50%);
   border-right: 3px solid #ad9a78;
   border-bottom: 2px solid #ad9a78;
+  transition: 0.5s;
 }
-.radio-btn::before{
+#radio-btn::before{
   content: '';
+
+  display: flex;
+  color: black;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   width: 120px;
   height: 55px;
@@ -375,11 +386,21 @@ nav .list{
   border: 0;
   left: 50%;
   top: 35%;
+  transition: 0.5s;
   transform: translate(-50%, -50%);
-  background: #b4b447;
-  /*filter: drop-shadow(0 0 20px #ffff99);*/
+  background-color: var(--background, #b4b447);
+  filter: var(--filter1, drop-shadow(0 0 0px #ffff99));
+  animation: var(--animation1, );
 }
-.radio-btn::after{
+@keyframes radio-fade{
+  0%, 100%{
+    filter: drop-shadow(0 0 20px #ffff99);
+  }
+  50%{
+    filter: drop-shadow(0 0 10px #ffff99);
+  }
+}
+#radio-btn::after{
   content: '';
   position: absolute;
   width: 120px;
@@ -391,7 +412,7 @@ nav .list{
   transform: translate(-50%, -50%);
   background: black;
 }
-.speaker{
+#speaker{
   position: absolute;
   left: 72%;
   transform: translate(-50%);
@@ -400,9 +421,10 @@ nav .list{
   border: 0;
   border-radius: 50%;
   background-color: #5e4435;
-  filter: drop-shadow(0 0 10px #fff);
+  animation-fill-mode: forwards;
+  animation: var(--animation2, );
 }
-.speaker::before{
+#speaker::before{
   content: '';
   position: absolute;
   left: 50%;
@@ -413,9 +435,21 @@ nav .list{
   border: 0;
   border-radius: 50%;
   background: #ad9a78;
-  filter: drop-shadow(0 0 10px #ad9a78);
+  animation: var(--animation2, );
+  animation-fill-mode: forwards;
 }
-.speaker::after{
+@keyframes speaker-fade{
+  0%, 100%{
+    filter: drop-shadow(0 0 0px #ad9a78);
+  }
+  20%, 80%{
+    filter: drop-shadow(0 0 5px #ad9a78);
+  }
+  40%, 60%{
+    filter: drop-shadow(0 0 10px #ad9a78);
+  }
+}
+#speaker::after{
   content: '';
   position: absolute;
   left: 50%;
